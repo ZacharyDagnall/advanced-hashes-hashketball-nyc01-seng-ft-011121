@@ -214,9 +214,9 @@ end
 def big_shoe_rebounds(thisPlayerName)
   biggestshoe = -1  #default, will easily be exceeded
   teams = game_hash
-  binding.pry
+  
   teams.each do |h_a|
-    binding.pry
+    teams[h_a[0]]
   end
   
   

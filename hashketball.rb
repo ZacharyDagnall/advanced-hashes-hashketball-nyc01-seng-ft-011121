@@ -168,7 +168,7 @@ def  team_colors(thisTeamName)
   teams = game_hash
   if teams[:home][:team_name] == thisTeamName
     return teams[:home][:colors]
-  else if teams[:away][:team_name] == thisTeamName
+  elsif teams[:away][:team_name] == thisTeamName
     return teams[:away][:colors]
   else
     return "Sorry, #{thisTeamName} is not in this game."

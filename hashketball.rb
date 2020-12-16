@@ -148,5 +148,3 @@ def shoe_size
   
 end
 
-def
-# Write code here

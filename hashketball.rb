@@ -126,4 +126,27 @@ def game_hash
   }
 end
 
+def num_points_scored(thisPlayerName)
+  rosters = game_hash
+  home_team_players = rosters[:home][:players]
+  home_team_players.each do |playa|
+    if playa[:player_name]==thisPlayerName
+      return playa[:points]
+    end
+  end
+
+  away_team_players = rosters[:away][:players]
+  away_team_players.each do |playa|
+    if playa[:player_name]==thisPlayerName
+      return playa[:points]
+    end
+  end
+  
+end
+
+def shoe_size
+  
+end
+
+def
 # Write code here

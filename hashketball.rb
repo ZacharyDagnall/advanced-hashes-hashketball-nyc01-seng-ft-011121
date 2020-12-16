@@ -164,3 +164,6 @@ def shoe_size(thisPlayerName)
   "#{thisPlayerName} is not on either team."
 end
 
+def  team_colors(teamName)
+  
+end

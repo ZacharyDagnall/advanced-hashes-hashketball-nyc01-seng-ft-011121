@@ -211,7 +211,7 @@ def player_stats(thisPlayerName)
   "Sorry, #{thisPlayerName} is not on either team."
 end
 
-def big_shoe_rebounds(thisPlayerName)
+def big_shoe_rebounds
   biggestshoe = -1  #default, will easily be exceeded
   associated_rebounds_num = -1
   teams = game_hash

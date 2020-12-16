@@ -213,34 +213,41 @@ end
 
 def big_shoe_rebounds(thisPlayerName)
   biggestshoe = -1  #default, will easily be exceeded
+  associated_rebounds_num = -1
   teams = game_hash
   
   teams.each do |h_a|
-    teams[h_a[0]]
-  end
-  
-  
-  if teams[:home][:team_name] == thisTeamName
-    return teams[:home][:players].map {|playa| playa[:number]}
-  elsif teams[:away][:team_name] == thisTeamName
-    return teams[:away][:players].map {|playa| playa[:number]}
-  else
-    return "Sorry, #{thisTeamName} is not in this game."
-  end
-  
-  teams = game_hash
-  #check home first
-  home_team_players = teams[:home][:players]
-  home_team_players.each do |playa|
-    if playa[:player_name]==thisPlayerName
-      return playa
+    teams[h_a[0]][players].each do |playa|
+      if playa[:shoe]>biggestshoe
+        biggestshoe = playa[:shoe]
+        associated_rebounds_num = playa[:rebounds]
     end
   end
+  associated_rebounds_num
   
-  puts 'yooooo'
-  #find biggest shoe size 
   
-  #what
+  #######
+  # if teams[:home][:team_name] == thisTeamName
+  #   return teams[:home][:players].map {|playa| playa[:number]}
+  # elsif teams[:away][:team_name] == thisTeamName
+  #   return teams[:away][:players].map {|playa| playa[:number]}
+  # else
+  #   return "Sorry, #{thisTeamName} is not in this game."
+  # end
+  
+  # teams = game_hash
+  # #check home first
+  # home_team_players = teams[:home][:players]
+  # home_team_players.each do |playa|
+  #   if playa[:player_name]==thisPlayerName
+  #     return playa
+  #   end
+  # end
+  
+  # puts 'yooooo'
+  # #find biggest shoe size 
+  
+  # #what
 end
 
 

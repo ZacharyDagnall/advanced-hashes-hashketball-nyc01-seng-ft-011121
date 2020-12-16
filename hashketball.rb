@@ -214,7 +214,7 @@ end
 def big_shoe_rebounds(thisPlayerName)
   biggestshoe = -1  #default, will easily be exceeded
   teams = game_hash
-  
+  binding.pry
   teams.each do |h_a|
     binding.pry
   end
@@ -228,7 +228,7 @@ def big_shoe_rebounds(thisPlayerName)
     return "Sorry, #{thisTeamName} is not in this game."
   end
   
-   teams = game_hash
+  teams = game_hash
   #check home first
   home_team_players = teams[:home][:players]
   home_team_players.each do |playa|

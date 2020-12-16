@@ -210,10 +210,10 @@ def player_stats(thisPlayerName)
   "Sorry, #{thisPlayerName} is not on either team."
 end
 
-def big_shoe_rebounds
+def big_shoe_rebounds(thisPlayerName)
   
   teams = game_hash
-   if teams[:home][:team_name] == thisTeamName
+  if teams[:home][:team_name] == thisTeamName
     return teams[:home][:players].map {|playa| playa[:number]}
   elsif teams[:away][:team_name] == thisTeamName
     return teams[:away][:players].map {|playa| playa[:number]}

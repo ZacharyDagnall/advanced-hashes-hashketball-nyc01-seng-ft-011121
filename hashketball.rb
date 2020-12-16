@@ -174,3 +174,8 @@ def  team_colors(thisTeamName)
     return "Sorry, #{thisTeamName} is not in this game."
   end
 end
+
+def team_names
+  teams = game_hash
+  [teams[:home][:team_name],teams[:away][:team_name]]
+end

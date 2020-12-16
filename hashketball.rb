@@ -1,4 +1,5 @@
-# Write your code below game_hash
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -211,9 +212,14 @@ def player_stats(thisPlayerName)
 end
 
 def big_shoe_rebounds(thisPlayerName)
-  biggestshoe = -1
-  
+  biggestshoe = -1  #default, will easily be exceeded
   teams = game_hash
+  
+  teams.each do |h_a|
+    binding.pry
+  end
+  
+  
   if teams[:home][:team_name] == thisTeamName
     return teams[:home][:players].map {|playa| playa[:number]}
   elsif teams[:away][:team_name] == thisTeamName

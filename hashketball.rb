@@ -183,9 +183,9 @@ end
 def player_numbers(thisTeamName)
   teams = game_hash
    if teams[:home][:team_name] == thisTeamName
-    return teams[:home][:players].select {|playa| playa[:number]}
+    return teams[:home][:players].map {|playa| playa[:number]}
   elsif teams[:away][:team_name] == thisTeamName
-    return teams[:away][:players].select {|playa| playa[:number]}
+    return teams[:away][:players].map {|playa| playa[:number]}
   else
     return "Sorry, #{thisTeamName} is not in this game."
   end

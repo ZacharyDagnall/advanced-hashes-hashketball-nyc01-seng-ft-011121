@@ -182,4 +182,16 @@ end
 
 def player_numbers(thisTeamName)
   teams = game_hash
+  
+  
+  
 end
+
+def player_stats(thisPlayerName)
+  
+  
+end
+
+
+
+

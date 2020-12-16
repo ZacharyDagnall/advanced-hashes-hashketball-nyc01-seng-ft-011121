@@ -211,6 +211,7 @@ def player_stats(thisPlayerName)
 end
 
 def big_shoe_rebounds(thisPlayerName)
+  biggestshoe = -1
   
   teams = game_hash
   if teams[:home][:team_name] == thisTeamName

@@ -217,7 +217,7 @@ def big_shoe_rebounds
   teams = game_hash
   
   teams.each do |h_a|
-    teams[h_a[0]][players].each do |playa|
+    teams[h_a[0]][:players].each do |playa|
       if playa[:shoe]>biggestshoe
         biggestshoe = playa[:shoe]
         associated_rebounds_num = playa[:rebounds]

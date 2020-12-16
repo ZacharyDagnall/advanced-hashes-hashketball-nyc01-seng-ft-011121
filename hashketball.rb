@@ -127,16 +127,16 @@ def game_hash
 end
 
 def num_points_scored(thisPlayerName)
-  rosters = game_hash
+  teams = game_hash
   #check home first
-  home_team_players = rosters[:home][:players]
+  home_team_players = teams[:home][:players]
   home_team_players.each do |playa|
     if playa[:player_name]==thisPlayerName
       return playa[:points]
     end
   end
   #check away next
-  away_team_players = rosters[:away][:players]
+  away_team_players = teams[:away][:players]
   away_team_players.each do |playa|
     if playa[:player_name]==thisPlayerName
       return playa[:points]
@@ -146,16 +146,16 @@ def num_points_scored(thisPlayerName)
 end
 
 def shoe_size(thisPlayerName)
-  rosters = game_hash
+  teams = game_hash
   #check home first
-  home_team_players = rosters[:home][:players]
+  home_team_players = teams[:home][:players]
   home_team_players.each do |playa|
     if playa[:player_name]==thisPlayerName
       return playa[:shoe]
     end
   end
   #check away next
-  away_team_players = rosters[:away][:players]
+  away_team_players = teams[:away][:players]
   away_team_players.each do |playa|
     if playa[:player_name]==thisPlayerName
       return playa[:shoe]
@@ -178,4 +178,8 @@ end
 def team_names
   teams = game_hash
   [teams[:home][:team_name],teams[:away][:team_name]]
+end
+
+def player_numbers(thisTeamName)
+  teams = game_hash
 end

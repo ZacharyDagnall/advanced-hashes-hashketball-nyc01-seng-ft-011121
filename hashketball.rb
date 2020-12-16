@@ -182,7 +182,7 @@ end
 
 def player_numbers(thisTeamName)
   teams = game_hash
-  teams.map 
+  teams.map {| | }
   
   
 end

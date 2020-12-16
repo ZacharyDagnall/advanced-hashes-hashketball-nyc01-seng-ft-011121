@@ -188,10 +188,27 @@ def player_numbers(thisTeamName)
 end
 
 def player_stats(thisPlayerName)
-  
-  
+  teams = game_hash
+  #check home first
+  home_team_players = teams[:home][:players]
+  home_team_players.each do |playa|
+    if playa[:player_name]==thisPlayerName
+      return playa
+    end
+  end
+  #check away next
+  away_team_players = teams[:away][:players]
+  away_team_players.each do |playa|
+    if playa[:player_name]==thisPlayerName
+      return playa
+    end
+  end
+  "Sorry, #{thisPlayerName} is not on either team."
 end
 
+def big_shoe_rebounds
+  
+end
 
 
 

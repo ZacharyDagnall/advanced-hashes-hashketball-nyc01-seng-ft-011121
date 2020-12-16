@@ -237,6 +237,7 @@ def big_shoe_rebounds(thisPlayerName)
     end
   end
   
+  puts 'yooooo'
   #find biggest shoe size 
   
   #what

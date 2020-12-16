@@ -221,6 +221,7 @@ def big_shoe_rebounds(thisPlayerName)
       if playa[:shoe]>biggestshoe
         biggestshoe = playa[:shoe]
         associated_rebounds_num = playa[:rebounds]
+      end
     end
   end
   associated_rebounds_num
